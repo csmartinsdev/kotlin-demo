@@ -17,7 +17,7 @@ class MessageController(private val service: MessageService) {
 
     @GetMapping("/{id}")
     fun getMessageById(@PathVariable id: String): ResponseEntity<Message> {
-        return service.findMessageById(id).toResponseEntity();
+        return service.findMessageById(id).toResponseEntity()
     }
 
     @PostMapping
